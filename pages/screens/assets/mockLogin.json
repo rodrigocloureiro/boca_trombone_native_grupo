@@ -1,15 +1,5 @@
 [
   {
-    "nome": "Rodrigo",
-    "sobrenome": "Vianna",
-    "username": "@Admin123",
-    "email": "rodrigovianna2@gmail.com",
-    "id": "1000",
-    "senha": "@Admin123",
-    "avatar": "/pages/assets/RMV_LOGO.jpg",
-    "definicao": "consumidor"
-  },
-  {
     "nome": "Maria",
     "sobrenome": "Souza",
     "username": "@mariasouza",
@@ -28,7 +18,7 @@
     "senha": "Teste@123",
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBOLtvPKBIfVjTIzpeyw4GUIAIyS3OE8ex5gI265c&s",
     "definicao": "consumidor"
-  },  
+  },
   {
     "nome": "Vivo",
     "username": "@vivo",
@@ -38,5 +28,15 @@
     "senha": "Admin@123",
     "avatar": "https://www.partagenorteshoppingnatal.com.br/wp-content/uploads/sites/11/2022/12/Logo-Vivo.png",
     "definicao": "empresa"
+  },
+  {
+    "nome": "Rodrigo",
+    "sobrenome": "Vianna",
+    "username": "@Admin123",
+    "email": "rodrigovianna2@gmail.com",
+    "id": "1004",
+    "senha": "@Admin123",
+    "avatar": "https://i.imgur.com/ItlWde6.gif",
+    "definicao": "consumidor"
   }
 ]

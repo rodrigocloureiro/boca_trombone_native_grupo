@@ -21,7 +21,7 @@ export default function HomeScreen({ companies }) {
         <Box>
           <FlatList
             data={companies.sort((a, b) =>
-              b.reclamacoes.length - a.reclamacoes.length //(refatorado: Semelhamte a doc do W3Schools para maior clareza)
+              b.reclamacoes > a.reclamacoes ? 1 : -1
             )}
             renderItem={({ item, index }) => (
               <TouchableOpacity

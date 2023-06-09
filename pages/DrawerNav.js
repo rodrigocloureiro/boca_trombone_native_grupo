@@ -1,27 +1,23 @@
+import { Platform } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "./screens/HomeScreen";
 import AddClaim from "./screens/AddClaimScreen";
-import { Platform } from "react-native";
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNav({ companies, addClaim, userLogged }) {
-  const [plataforma, setPlataforma] = useState("");
-  useLayoutEffect(() => {
-    if (Platform.OS == "ios") return setPlataforma("IOS");
-    if (Platform.OS == "android") return setPlataforma("Android");
-    return setPlataforma("Web");
-  }, []);
+  const [ headerTitle, setHeaderTitle ] = useState(`Início - ${Platform.OS === "ios" ? "iOS" : "Android"}`);
   return (
     <Drawer.Navigator
       screenOptions={{
         headerStyle: { backgroundColor: "#F0F0F0" },
         headerTintColor: "#1D2530",
         drawerStyle: { backgroundColor: "#F0F0F0" },
+        headerTitle: `${headerTitle}`
       }}
     >
-      <Drawer.Screen name={`Início - ${plataforma}`}>
+      <Drawer.Screen name="Início">
         {() => <HomeScreen companies={companies} />}
       </Drawer.Screen>
       <Drawer.Screen name="Adicionar Reclamação">

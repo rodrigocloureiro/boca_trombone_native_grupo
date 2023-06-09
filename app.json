@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "boca_trombone_native",
-    "slug": "boca_trombone_native",
+    "name": "boca_trombone",
+    "slug": "boca_trombone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

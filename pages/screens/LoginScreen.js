@@ -88,7 +88,7 @@ export default function LoginScreen({ handleLogin, isLogged, setIsLogged }) {
                 <FormControl.Label>Username</FormControl.Label>
                 <Input
                   onChangeText={handleUsernameValidation}
-                  placeholder="@usuário"
+                  placeholder="@username"
                   focusOutlineColor={errors.username !== undefined && "red.500"}
                   InputLeftElement={
                     <Icon
