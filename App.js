@@ -17,7 +17,6 @@ export default function App() {
   const [companies, setCompanies] = useState(data);
   const [users, setUsers] = useState(mockLogin);
   const [userLogged, setUserLogged] = useState("");
-  const [location, setLocation] = useState(null);
   const [regionName, setRegionName] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -28,7 +27,7 @@ export default function App() {
         setErrorMsg("Permissão de localização negada!");
       } else {
         let location = await Location.getCurrentPositionAsync();
-        setLocation(location);
+        console.log(location);
         const regionName = await Location.reverseGeocodeAsync({
           latitude: location.coords.latitude,
           longitude: location.coords.longitude,
@@ -47,6 +46,7 @@ export default function App() {
     sobrenome,
     username
   ) => {
+    console.log(regionName);
     alert("Reclamação enviada!");
     const date = new Date();
     setCompanies(
@@ -68,7 +68,7 @@ export default function App() {
                   location:
                     errorMsg !== null
                       ? errorMsg
-                      : `${regionName.city} - ${regionName.region}`,
+                      : `${regionName.subregion} - ${regionName.region}`,
                 },
               ],
             }
